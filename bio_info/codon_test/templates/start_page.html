@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Пользователь: {{ user.username }}</p>
+    <form action="{% url 'check' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="text" value="check">Проверить</button>
+    </form>
+    <p><a href="{% url 'logout' %}" value="logout">Выйти из системы</a></p>
+</body>
+</html>

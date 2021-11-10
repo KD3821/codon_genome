@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" value="login">Войти в систему</button>
+    </form>
+    <p><a href="{% url 'register' %}" value="register">Регистрация</a></p>
+</body>
+</html>
